@@ -19,9 +19,9 @@
         <h1>Авторизация</h1>
         <p>Здесь вы можете авторизоваться на сайте</p>
         <form action="/user/auth" method="post" class="form-control">
-            <input type="email" name="email" placeholder="Введите email" value="<?=$_POST['email']?>"><br>
-            <input type="password" name="pass" placeholder="Введите пароль" value="<?=$_POST['pass']?>"><br>
-            <div class="error"><?=$data['message']?></div>
+            <input type="email" name="email" placeholder="Введите email" value="<?=isset($_POST['email'])?>"><br>
+            <input type="password" name="pass" placeholder="Введите пароль" value="<?=isset($_POST['pass'])?>"><br>
+            <div class="error"><?=$data['message'] ?? null?></div>
             <button class="btn" id="send">Готово</button>
         </form>
     </div>

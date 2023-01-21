@@ -19,11 +19,11 @@
         <h1>Регистрация</h1>
         <p>Здесь вы можете зарегистрироваться</p>
         <form action="/user/reg" method="post" class="form-control">
-            <input type="text" name="name" placeholder="Введите имя" value="<?=$_POST['name']?>"><br>
-            <input type="email" name="email" placeholder="Введите email" value="<?=$_POST['email']?>"><br>
-            <input type="password" name="pass" placeholder="Введите пароль" value="<?=$_POST['pass']?>"><br>
-            <input type="password" name="re_pass" placeholder="Повторите пароль" value="<?=$_POST['re_pass']?>">
-            <div class="error"><?=$data['message']?></div>
+            <input type="text" name="name" placeholder="Введите имя" value="<?=$_POST['name'] ?? null?>"><br>
+            <input type="email" name="email" placeholder="Введите email" value="<?=$_POST['email'] ?? null?>"><br>
+            <input type="password" name="pass" placeholder="Введите пароль" value="<?=$_POST['pass'] ?? null?>"><br>
+            <input type="password" name="re_pass" placeholder="Повторите пароль" value="<?=$_POST['re_pass'] ?? null?>">
+            <div class="error"><?=$data['message'] ?? null?></div>
             <button class="btn" id="send">Готово</button>
         </form>
     </div>

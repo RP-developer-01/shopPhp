@@ -29,7 +29,7 @@
             <div>
                 <form action="/basket" method="post">
                     <input type="hidden" name="item_id" value="<?=$data['id']?>">
-                    <button class="btn">Купить за <?=$data['price']?> рублей</button>
+                    <button class="btn">Купить за <?=$data['price']?> грн</button>
                 </form>
             </div>
         </div>

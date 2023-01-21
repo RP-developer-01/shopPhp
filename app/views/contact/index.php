@@ -19,11 +19,11 @@
         <h1>Обратная связь</h1>
         <p>Напишите нам, если у вас есть вопросы</p>
         <form action="/contact" method="post" class="form-control">
-            <input type="text" name="name" placeholder="Введите имя" value="<?=$_POST['name']?>"><br>
-            <input type="email" name="email" placeholder="Введите email" value="<?=$_POST['email']?>"><br>
-            <input type="text" name="age" placeholder="Введите возраст" value="<?=$_POST['age']?>"><br>
-            <textarea name="message" placeholder="Введите само сообщение"><?=$_POST['message']?></textarea>
-            <div class="error"><?=$data['message']?></div>
+            <input type="text" name="name" placeholder="Введите имя" value="<?=$_POST['name'] ?? null?>"><br>
+            <input type="email" name="email" placeholder="Введите email" value="<?=$_POST['email'] ?? null?>"><br>
+            <input type="text" name="age" placeholder="Введите возраст" value="<?=$_POST['age'] ?? null?>"><br>
+            <textarea name="message" placeholder="Введите само сообщение"><?=$_POST['message'] ?? null?></textarea>
+            <div class="error"><?=$data['message'] ?? null?></div>
             <button class="btn" id="send">Отправить</button>
         </form>
     </div>

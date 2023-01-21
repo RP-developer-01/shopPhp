@@ -18,7 +18,7 @@
 
 <div class="container main">
     <h1>Корзина товаров</h1>
-    <?php if (count($data['products']) == 0): ?>
+    <?php if (!isset($data['products'])): ?>
         <p><?=$data['empty'] ?? null?></p>
     <?php else: ?>
         <div class="products">
@@ -30,11 +30,11 @@
                 <div class="row">
                     <img src="/public/img/<?=$data['products'][$i]['img']?>" alt="<?=$data['products'][$i]['title']?>">
                     <h4><?=$data['products'][$i]['title']?></h4>
-                    <span><?=$data['products'][$i]['price']?> рублей</span>
+                    <span><?=$data['products'][$i]['price']?> грн</span>
                 </div>
             <?php endfor; ?>
 
-            <button class="btn">Приобристи (<b><?=$sum?> рублей</b>)</button>
+            <button class="btn">Приобристи (<b><?=$sum?> грн</b>)</button>
         </div>
     <?php endif;?>
 </div>

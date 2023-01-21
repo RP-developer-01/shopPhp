@@ -6,7 +6,7 @@
             <a href="/contact/about">Про компанию</a>
         </div>
         <div class="tel">
-            <i class="fas fa-phone"></i> +7 (000) 000 - 00 - 00
+            <i class="fas fa-phone"></i> +380 (00) 000 - 00 - 00
         </div>
     </div>
     <div class="container middle">
@@ -16,24 +16,23 @@
         </div>
         <div class="auth-checkout">
             <a href="/basket">
-
                 <?php
                     require_once 'app/models/BasketModel.php';
                     $basketModel = new BasketModel();
                 ?>
                 <button class="btn basket">Корзина <b>(<?=$basketModel->countItems()?>)</b></button>
             </a><br>
-            <?php if(isset($_COOKIE['login'])): ?>
-            <a href="/user/auth">
-                <button class="btn auth">Войти</button>
-            </a>
-            <a href="/user/reg">
-                <button class="btn">Регистрация</button>
-            </a>
+            <?php if(!isset($_COOKIE['login'])): ?>
+                <a href="/user/auth">
+                    <button class="btn auth">Войти</button>
+                </a>
+                <a href="/user/reg">
+                    <button class="btn">Регистрация</button>
+                </a>
             <?php else: ?>
-            <a href="/user/dashboard">
-                <button class="btn dashboard">Кабинет пользователя</button>
-            </a>
+                <a href="/user/dashboard">
+                    <button class="btn dashboard">Кабинет пользователя</button>
+                </a>
             <?php endif; ?>
         </div>
     </div>
