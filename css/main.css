@@ -164,7 +164,7 @@ header > .menu > ul > li::before {
 }
 
 header > .menu > ul > li:hover header > .menu > ul > li::before {
-
+    transform: translateY(10px);
 }
 
 header > .menu > ul > li a {color: #333}
