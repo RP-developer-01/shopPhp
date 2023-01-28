@@ -28,8 +28,7 @@ a:hover {
 }
 
 .container {
-    padding-left: 15%;
-    padding-right: 15%;
+    margin: 0 auto;
     width: 70%;
 }
 
@@ -41,21 +40,28 @@ a:hover {
     }
 }
 
-header > .top-menu {
-    padding-bottom: 15px;
-    padding-top: 15px;
+/*==============================*/
+/*==========top-menu===========*/
+/*==============================*/
+
+.main_top-menu {
+    background: #fff;
+    width: 100vw;
+}
+
+.top-menu {
     display: flex;
     justify-content: space-between;
     color: #02315D;
     text-transform: uppercase;
-    background: #fff;
+    padding: 15px 0;
 }
 
-header > .top-menu > .nav  {
+.top-menu > .nav  {
     display: flex;
 }
 
-header > .top-menu > .nav a, header > .top-menu > .tel  {
+.top-menu > .nav a, .top-menu > .tel  {
     margin-right: 10px;
     color: #02315D;
     font-size: 9px;
@@ -63,17 +69,21 @@ header > .top-menu > .nav a, header > .top-menu > .tel  {
     letter-spacing: 1.2px;
 }
 
-header > .top-menu > .nav a:hover {
+.top-menu > .nav a:hover {
     color: #757575;
 }
 
-header > .top-menu > .tel > i {
+.top-menu > .tel > i {
     transform: rotate(90deg);
     margin-right: 10px;
 }
 
+
+/*==============================*/
+/*==========middle===========*/
+/*==============================*/
+
 header > .middle {
-    margin: 30px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -101,7 +111,7 @@ header > .middle > .logo span {
     border-radius: 5px;
     border: 0;
     font-size: 14px;
-    margin-left: 10px;
+    margin: 10px;
     color: #fff;
     cursor: pointer;
     transition: all 600ms ease;
@@ -131,9 +141,17 @@ header .btn.dashboard {
     box-shadow: 0px 10px 20px -2px rgba(0,0,0,0.3);
 }
 
+
+/*==============================*/
+/*==============menu===========*/
+/*==============================*/
+
 header > .menu {
     position: fixed;
-    width: 15%;
+    width: 10%;
+    top: 20%;
+    padding: 10% 0;
+    background: rgb(200 194 0 / 45%);
 }
 
 header > .menu > ul {
@@ -155,7 +173,7 @@ header > .menu > ul > li:hover {
 }
 
 header > .menu > ul > li::before {
-    content:''; /* with class ModalCarrot ??*/
+    content:'';
     width: 20px;
     height: 20px;
     display: block;
@@ -176,12 +194,12 @@ header > .menu > ul > li a:hover {color: #ff5644}
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-bottom: 10%;
 }
 
 .main > .products > .product {
-    width: 30%;
+    max-width: 30%;
     margin-right: 5%;
-    height: 480px;
     background: #eaeaea;
     border-radius: 5px 5px 0 0;
     margin-top: 50px;
@@ -216,18 +234,24 @@ header > .menu > ul > li a:hover {color: #ff5644}
 
 .main > .products > .product .btn {background: #ff5644}
 
+
+/*==============================*/
+/*============footer===========*/
+/*==============================*/
 footer {
-    margin-top: 50px;
+    width: 100vw;
+    background: #333;
+}
+
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #333;
     color: #fff;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 15px 0;
 }
 
-footer > .social > i {
+.footer > .social > i {
     display: inline-block;
     width: 35px;
     height: 35px;
@@ -241,7 +265,7 @@ footer > .social > i {
     transition: all 600ms ease;
 }
 
-footer > .social > i:hover {
+.footer > .social > i:hover {
     transition: all 600ms ease;
     transform: translateY(-5px);
 }
