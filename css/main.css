@@ -1,42 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap&subset=cyrillic-ext');
 
 * {
-    margin: 0;
+    margin : 0;
     padding: 0;
     outline: none;
 }
 
 body {
-    font-size: 14px;
+    font-size  : 14px;
     font-family: 'Montserrat', sans-serif;
-    color: #14471E;
+    color      : #14471E;
     font-weight: 400;
-    background: #C8D2D1;
+    background : #C8D2D1;
 }
 
-img {max-width: 100%}
+img {
+    max-width: 100%
+}
 
 a {
-    color: #ff5644;
+    color          : #ff5644;
     text-decoration: none;
-    transition: all 500ms ease;
+    transition     : all 500ms ease;
 }
 
 a:hover {
-    color: #8bddff;
+    color     : #8bddff;
     transition: all 500ms ease;
 }
 
 .container {
     margin: 0 auto;
-    width: 70%;
+    width : 70%;
 }
 
 @media(max-width: 900px) {
     .container {
-        padding-left: 5%;
+        padding-left : 5%;
         padding-right: 5%;
-        width: 90%;
+        width        : 90%;
     }
 }
 
@@ -46,35 +48,36 @@ a:hover {
 
 .main_top-menu {
     background: #fff;
-    width: 100vw;
+    width     : 100vw;
 }
 
 .top-menu {
-    display: flex;
+    display        : flex;
     justify-content: space-between;
-    color: #02315D;
-    text-transform: uppercase;
-    padding: 15px 0;
+    color          : #02315D;
+    text-transform : uppercase;
+    padding        : 15px 0;
 }
 
-.top-menu > .nav  {
+.top-menu>.nav {
     display: flex;
 }
 
-.top-menu > .nav a, .top-menu > .tel  {
-    margin-right: 10px;
-    color: #02315D;
-    font-size: 9px;
-    font-weight: 700;
+.top-menu>.nav a,
+.top-menu>.tel {
+    margin-right  : 10px;
+    color         : #02315D;
+    font-size     : 9px;
+    font-weight   : 700;
     letter-spacing: 1.2px;
 }
 
-.top-menu > .nav a:hover {
+.top-menu>.nav a:hover {
     color: #757575;
 }
 
-.top-menu > .tel > i {
-    transform: rotate(90deg);
+.top-menu>.tel>i {
+    transform   : rotate(90deg);
     margin-right: 10px;
 }
 
@@ -83,62 +86,163 @@ a:hover {
 /*==========middle===========*/
 /*==============================*/
 
-header > .middle {
-    display: flex;
+header>.middle {
+    display        : flex;
     justify-content: space-between;
-    align-items: center;
+    align-items    : center;
 }
 
-header > .middle > .logo img {
-    width: 150px;
-    float: left;
+header>.middle>.logo img {
+    width       : 150px;
+    float       : left;
     margin-right: 20px;
 }
 
-header > .middle > .logo span {
-    float: left;
-    font-size: 30px;
+header>.middle>.logo span {
+    float      : left;
+    font-size  : 30px;
     font-weight: 700;
-    display: block;
-    width: 250px;
-    margin-top: 30px;
+    display    : block;
+    width      : 250px;
+    margin-top : 30px;
+}
+
+/*product btn*/
+.btn {
+    position        : relative;
+    margin          : 0;
+    padding         : 10px 15px;
+    outline         : none;
+    text-decoration : none;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    cursor          : pointer;
+    text-transform  : uppercase;
+    background-color: #fff;
+    border          : 1px solid rgb(250, 182, 46, 0.6);
+    border-radius   : 10px;
+    color           : #fbb72c;
+    font-weight     : 400;
+    font-family     : inherit;
+    z-index         : 0;
+    overflow        : hidden;
+    transition      : all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+
+.btn span {
+    color         : #fbb72c;
+    font-size     : 10px;
+    font-weight   : 500;
+    letter-spacing: 0.7px;
+}
+
+.btn:hover {
+    animation: rotate624 0.7s ease-in-out both;
+}
+
+.btn:hover span {
+    animation      : storm1261 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+@keyframes rotate624 {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes storm1261 {
+    0% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+
+    25% {
+        transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+
+    50% {
+        transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+
+    75% {
+        transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
 }
 
 .btn {
-    width: 130px;
-    height: 40px;
-    background: #333;
-    border-radius: 5px;
-    border: 0;
-    font-size: 14px;
-    margin: 10px;
-    color: #fff;
-    cursor: pointer;
-    transition: all 600ms ease;
+    border  : 1px solid;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn span {
+    z-index: 20;
+}
+
+/**/
+
+.btn:after {
+    background: #38ef7d;
+    content   : "";
+    height    : 155px;
+    left      : -75px;
+    opacity   : 0.4;
+    position  : absolute;
+    top       : -50px;
+    transform : rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width     : 50px;
+    z-index   : -10;
+}
+
+.btn:hover:after {
+    left      : 120%;
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 header .btn.auth {
-    width: 100px;
+    width     : 100px;
     background: #ff5644;
 }
 
 header .btn.basket {
-    width: 95%;
-    background: #fff;
-    color: #333;
+    width        : 95%;
+    background   : #fff;
+    color        : #333;
     margin-bottom: 10px;
-    border: 1px solid #333;
+    border       : 1px solid #333;
 }
 
 header .btn.dashboard {
-    width: 200px;
+    width     : 200px;
     background: #ff5644;
 }
 
 .btn:hover {
     transition: all 600ms ease;
-    transform: scale(1.05) translateY(-5px);
-    box-shadow: 0px 10px 20px -2px rgba(0,0,0,0.3);
+    transform : scale(1.05) translateY(-5px);
 }
 
 
@@ -146,126 +250,148 @@ header .btn.dashboard {
 /*==============menu===========*/
 /*==============================*/
 
-header > .menu {
-    position: fixed;
-    width: 10%;
-    top: 20%;
-    padding: 10% 0;
+header>.menu {
+    position  : fixed;
+    width     : 10%;
+    top       : 20%;
+    padding   : 10% 0;
     background: rgb(200 194 0 / 45%);
 }
 
-header > .menu > ul {
-    display: flex;
+header>.menu>ul {
+    display        : flex;
     justify-content: space-between;
-    flex-direction: column;
-    align-items: flex-start;
-    font-size: 1.5rem;
+    flex-direction : column;
+    align-items    : flex-start;
+    font-size      : 1.5rem;
 }
 
-header > .menu > ul > li {
+header>.menu>ul>li {
     list-style: none;
-    margin: 5px;
+    margin    : 5px;
     transition: transform 500ms ease;
 }
 
-header > .menu > ul > li:hover {
+header>.menu>ul>li:hover {
     transform: scale(1.2) translateY(-10px) translateX(10px);
 }
 
-header > .menu > ul > li::before {
-    content:'';
-    width: 20px;
-    height: 20px;
-    display: block;
-    background:url('/public/img/sneaker.svg') 0 0/auto 100% no-repeat;
-    position: absolute;
+header>.menu>ul>li::before {
+    content   : '';
+    width     : 20px;
+    height    : 20px;
+    display   : block;
+    background: url('/public/img/sneaker.svg') 0 0/auto 100% no-repeat;
+    position  : absolute;
 }
 
-header > .menu > ul > li:hover header > .menu > ul > li::before {
+header>.menu>ul>li:hover header>.menu>ul>li::before {
     transform: translateY(10px);
 }
 
-header > .menu > ul > li a {color: #333}
-header > .menu > ul > li a:hover {color: #ff5644}
+header>.menu>ul>li a {
+    color: #333
+}
 
-.main {margin-top: 50px}
+header>.menu>ul>li a:hover {
+    color: #ff5644
+}
 
-.main > .products {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+/*main*/
+
+.main {
+    display       : flex;
+    flex-direction: column;
+    align-items   : flex-end;
+    margin-top    : 50px
+}
+
+.main>.products {
+    display      : flex;
+    flex-wrap    : wrap;
+    align-items  : flex-start;
     margin-bottom: 10%;
+    max-width    : 80%;
 }
 
-.main > .products > .product {
-    max-width: 30%;
-    margin-right: 5%;
-    background: #eaeaea;
+.main>.products>.product {
+    max-width    : 30%;
+    height       : 450px;
+    margin-right : 5%;
+    background   : #eaeaea;
     border-radius: 5px 5px 0 0;
-    margin-top: 50px;
-    border: 1px solid silver;
-    box-sizing: border-box;
+    margin-top   : 50px;
+    border       : 1px solid silver;
+    box-sizing   : border-box;
 }
 
-.main > .products > .product:nth-child(3n) {margin-right: 0}
+.main>.products>.product:nth-child(3n) {
+    margin-right: 0
+}
 
-.main > .products > .product .image {
-    width: 100%;
-    height: 200px;
+.main>.products>.product .image {
+    width   : 100%;
+    height  : 200px;
     overflow: hidden;
 }
 
-.main > .products > .product .image img {
+.main>.products>.product .image img {
     border-radius: 5px 5px 0 0;
-    transition: all 600ms ease;
+    transition   : all 1s ease;
 }
 
-.main > .products > .product .image img:hover {transform: scale(1.15)}
+.main>.products>.product .image img:hover {
+    transform: scale(1.1)
+}
 
-.main > .products > .product h3,
-.main > .products > .product p {
-    margin: 20px 5%;
-    width: 90%;
+.main>.products>.product h3,
+.main>.products>.product p {
+    margin   : 20px 5%;
+    width    : 90%;
     font-size: 22px;
-    color: #515b5b;
+    color    : #515b5b;
 }
 
-.main > .products > .product p {font-size: 16px}
+.main>.products>.product p {
+    font-size: 16px
+}
 
-.main > .products > .product .btn {background: #ff5644}
+.main>.products>.product .btn {
+    background: #ff5644
+}
 
 
 /*==============================*/
 /*============footer===========*/
 /*==============================*/
 footer {
-    width: 100vw;
+    width     : 100vw;
     background: #333;
 }
 
 .footer {
-    display: flex;
+    display        : flex;
     justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    padding: 15px 0;
+    align-items    : center;
+    color          : #fff;
+    padding        : 15px 0;
 }
 
-.footer > .social > i {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    text-align: center;
+.footer>.social>i {
+    display      : inline-block;
+    width        : 35px;
+    height       : 35px;
+    line-height  : 35px;
+    text-align   : center;
     border-radius: 50%;
-    background: silver;
-    margin-left: 5px;
-    cursor: pointer;
-    color: #333;
-    transition: all 600ms ease;
+    background   : silver;
+    margin-left  : 5px;
+    cursor       : pointer;
+    color        : #333;
+    transition   : all 600ms ease;
 }
 
-.footer > .social > i:hover {
+.footer>.social>i:hover {
     transition: all 600ms ease;
-    transform: translateY(-5px);
+    transform : translateY(-5px);
 }
